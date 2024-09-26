@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="login.jsp">
+		<h2>ë¡ê·¸ì¸</h2>
+		<input type="text" id="id" name="id" placeholder="ìì´ë" required>
+		<input type="password" id="pw" name="pw" placeholder="ë¹ë°ë²í¸" required>
+		<hr>
+
+		spring<input type="checkbox" name="season" value="spring"><br>
+		summer<input type="checkbox" name="season" value="summer"><br>
+		fall<input type="checkbox" name="season" value="fall"><br>
+		winter<input type="checkbox" name="season" value="winter"><br>
+		
+		<hr>
+		<button type="submit">ë¡ê·¸ì¸</button>
+	</form>
+</body>
+</html>

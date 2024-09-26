@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+ <form method="get" action="/BackendProject/loginServlet">
+        <h2>로그인</h2>
+        <input type="text" id="id" name="id" placeholder="아이디" required>
+        <input type="password" id="pw" name="pw" placeholder="비밀번호" required>
+        <button type="submit">로그인</button>
+    </form>
+</body>
+</html>

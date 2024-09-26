@@ -1,0 +1,12 @@
+package com.mvc.vo;
+
+//vo : board 테이블 안의 레코드 한 건의 정보를 표현하기 위한 클래스
+public class Board {
+	private String num;
+	private String pass;
+	private String name;
+	private String wdate;
+	private String title;
+	private String content;
+	private String count;
+}

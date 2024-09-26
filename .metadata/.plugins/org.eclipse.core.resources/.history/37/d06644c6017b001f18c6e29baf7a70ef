@@ -1,0 +1,27 @@
+package com.mvc.front;
+
+import java.util.ArrayList;
+
+import com.mvc.service.BoardService;
+import com.mvc.service.BoardServiceImpl;
+import com.mvc.vo.Board;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+//FrontController 에서 요청을 넘겨 받아 처리
+public class BoardController {
+	BoardService service;
+
+	public BoardController() {
+		service = new BoardServiceImpl();
+	}
+
+
+
+	public ArrayList<Board> list(HttpServletRequest request, HttpServletResponse response) {
+		return service.selectAll();
+		// TODO Auto-generated method stub
+	}
+
+}

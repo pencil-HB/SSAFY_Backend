@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="jakarta.servlet.Servlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.GenericServlet"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="com.ssafy.board.model.service.BoardServiceImpl"/>
+    <fullyQualifiedTypeName name="com.ssafy.board.model.BoardDto"/>
+    <fullyQualifiedTypeName name="com.ssafy.board.model.dao.BoardDaoImpl"/>
+    <fullyQualifiedTypeName name="java.lang.Process"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="com.mvc.front.BoardFrontController"/>
+    <fullyQualifiedTypeName name="com.mvc.service.BoardService"/>
+    <fullyQualifiedTypeName name="com.mvc.service.BoardServiceImpl"/>
+    <fullyQualifiedTypeName name="com.mvc.util.DBUtil"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="com.mvc.dao.BoardDAO"/>
+    <fullyQualifiedTypeName name="com.mvc.dao.BoardDAOImpl"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.mvc.vo.Board"/>
+</qualifiedTypeNameHistroy>

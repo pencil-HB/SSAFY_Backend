@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+mark.orange {
+  background: linear-gradient(to top, orange 20%, transparent 30%);
+}
