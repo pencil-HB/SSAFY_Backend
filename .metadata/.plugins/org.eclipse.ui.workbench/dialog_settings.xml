@@ -26,10 +26,11 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\ssafy\backend-git\backend\0926_Cookie_Session\02_live\board4_cookie_session"/>
 			<item value="C:\ssafy\backend-git\backend\0926_Cookie_Session\01_skeleton\board4_cookie_session"/>
 		</list>
 		<section name="FileSystemImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="285"/>
+			<item key="DIALOG_X_ORIGIN" value="287"/>
 			<item key="DIALOG_Y_ORIGIN" value="186"/>
 			<item key="DIALOG_WIDTH" value="623"/>
 			<item key="DIALOG_HEIGHT" value="620"/>
