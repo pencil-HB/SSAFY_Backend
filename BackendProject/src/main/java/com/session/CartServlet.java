@@ -22,9 +22,14 @@ public class CartServlet extends HttpServlet {
 		// 2.클라이언트로 보낼 컨텐트의 출력을 위해 출력용 스트림 준비
 		PrintWriter out = response.getWriter();
 		
+		//파라미터 얻어오기
 		String id = request.getParameter("id");
 		
-		HttpSession session = request.getSession();
+		//Session 얻어오기
+		//true:없으면 새로 만들어줌
+		//false:없으면 null리턴
+		HttpSession session = request.getSession(true);
+		
 		if(session.isNew()) {
 			session.setAttribute("tomato", new int[] {0});
 			session.setAttribute("orange", new int[] {0});

@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" import="java.util.ArrayList"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%-- 1.login.jsp에서 넘어온 파라메터 받기
+	 2. 받아온 값을 세션에 저장하기
+	 3. 링크 눌러서 sessionCheck.jsp 로 넘어가기
+--%>
+<h1>session에 값 저장</h1>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -19,14 +19,14 @@
 	<div class="container text-center">
 		<img src="image/f3.jpg" class="rounded-circle"/>
 		<h1>Login</h1>
-		<form method="post" action="">
+		<form method="post" action="board?act=loginProcess">
 			<div class="form-group text-left">
 				<label for="id">ID:</label>
 				<input type="text" class="form-control"	name="id" >
 			</div>
 			<div class="form-group  text-left">
 				<label for="pass">Password:</label> 
-				<input type="password" class="form-control" value="ssafy" name="pass">
+				<input type="password" class="form-control" value="ssafy" name="pw">
 			</div>
 		
 			<button type="submit" class="btn btn-primary">Submit</button>

@@ -23,7 +23,7 @@ public class ShopServlet extends HttpServlet {
 		out.println("<a href='CartServlet?id=tomato'>쇼핑백에 토마토 담기</a>&nbsp;&nbsp;&nbsp;");
 		out.println("<a href='CartServlet?id=orange'>쇼핑백에 오렌지 담기</a>&nbsp;&nbsp;&nbsp;");
 		out.println("<a href='CheckoutServlet?id=see'>쇼핑백 보기</a>&nbsp;&nbsp;&nbsp;");
-		out.println("<a href='CheckoutServlet?id=check'>계산하기</a>&nbsp;&nbsp;&nbsp;");
+		out.println("<a href='CheckoutServlet?id=checkout'>계산하기</a>&nbsp;&nbsp;&nbsp;");
 		out.println("</body></html>");
 	}
 

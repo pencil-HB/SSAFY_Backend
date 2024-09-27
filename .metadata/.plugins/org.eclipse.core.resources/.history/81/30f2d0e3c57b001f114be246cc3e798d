@@ -1,0 +1,39 @@
+package com.session;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * Servlet implementation class CheckoutServlet
+ */
+// 세션 안의 정보 확인(id=see), 세션 안의 정보삭제(id=checkout) or 세션 삭제
+public class CheckoutServlet extends HttpServlet {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// 1.서버에서 클라이언트로 보내는 응답의 컨텐트 타입 지정
+		response.setContentType("text/html;charset=utf-8");// MIME TYPE
+
+		// 2.클라이언트로 보낼 컨텐트의 출력을 위해 출력용 스트림 준비
+		PrintWriter out = response.getWriter();
+		
+		String id = request.getParameter("id");
+		HttpSession session = request.getSession(false);
+		
+		//3.
+		if(session == null) {
+			out.println("<h1>장바구니에 물건이 없습니다.</h1>");
+			out.println("<hr><a href='ShopServlet'>쇼핑하러 가기</a>");
+		} else {
+			session.setAttribute("tomato", new int[] {0});
+			session.setAttribute("orange", new int[] {0});
+		}
+	}
+
+}

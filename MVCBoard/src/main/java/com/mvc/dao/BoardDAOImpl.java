@@ -38,6 +38,7 @@ public class BoardDAOImpl implements BoardDAO {
 				Board b = new Board(num, name, wdate, title, count);
 				list.add(b);
 			}
+			con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -62,6 +63,7 @@ public class BoardDAOImpl implements BoardDAO {
 			int count = rs.getInt(5);
 			b = new Board(num, name, wdate, title, count);
 			b.setContent(rs.getString(6));
+			con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -82,11 +84,12 @@ public class BoardDAOImpl implements BoardDAO {
 			stat.setString(4, b.getContent());			
 			
 			int rs = stat.executeUpdate();
-			
+			con.close();
 			if(rs==1) return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		return false;
 	}
 
@@ -114,9 +117,47 @@ public class BoardDAOImpl implements BoardDAO {
 			stat2.setInt(1, count);
 			stat2.setString(2, num);
 			stat2.executeUpdate();
+			con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public ArrayList<Board> search(String type, String word) {
+		ArrayList<Board> list = new ArrayList();
+		String q="";
+		if(type.equals("name")) {
+			q = "select num, name, wdate, title, count from board where name like ? order by num desc";
+		} else if(type.equals("title")) {
+			q = "select num, name, wdate, title, count from board where title like ? order by num desc";
+		} else {
+			q =  "select num, name, wdate, title, count from board order by num desc";
+		}
+		
+		try {
+			Connection con = util.getConnection();
+			PreparedStatement stat = con.prepareStatement(q);
+			
+			stat.setString(1, "%"+word+"%");
+			
+			ResultSet rs = stat.executeQuery();
+			
+			while (rs.next()) {
+				String num = rs.getString(1);
+				String name = rs.getString(2);
+				String wdate = rs.getString(3);
+				String title = rs.getString(4);
+				int count = rs.getInt(5);
+				Board b = new Board(num, name, wdate, title, count);
+				list.add(b);
+			}
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return list;
 	}
 
 }

@@ -1,0 +1,96 @@
+package com.mvc.controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.mvc.service.BoardService;
+import com.mvc.service.BoardServiceImpl;
+import com.mvc.vo.Board;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+//FrontController 에서 요청을 넘겨 받아 처리
+public class BoardController {
+	BoardService service;
+
+	public BoardController() {
+		service = new BoardServiceImpl();
+	}
+
+	public void list(HttpServletRequest request, HttpServletResponse response) {
+		ArrayList<Board> list = service.selectAll();
+		request.setAttribute("list", list);
+
+		// view(jsp)로 넘어가기
+		// forward 대신 사용하는 게 request dispatcher 임.
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/list.jsp");
+		// 넘어갈 예정인 Dispatcher를 생성하기
+
+		try {
+			dispatcher.forward(request, response); // 실제로 넘김
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void read(HttpServletRequest request, HttpServletResponse response) {
+		Board board = service.selectOne(request.getParameter("num"));
+
+		request.setAttribute("b", board);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/read.jsp");
+
+		try {
+			dispatcher.forward(request, response); // 실제로 넘김
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void insertForm(HttpServletRequest request, HttpServletResponse response) {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/insertForm.jsp");
+		try {
+			dispatcher.forward(request, response); // 실제로 넘김
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void insertProcess(HttpServletRequest request, HttpServletResponse response) {
+		Board board = new Board();
+		board.setTitle(request.getParameter("title"));
+		board.setPass(request.getParameter("pass"));
+		board.setName(request.getParameter("name"));
+		board.setContent(request.getParameter("content"));
+		
+		service.insert(board);
+		
+		try {
+			response.sendRedirect("/mvc");
+			System.out.println("go");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void search(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+}

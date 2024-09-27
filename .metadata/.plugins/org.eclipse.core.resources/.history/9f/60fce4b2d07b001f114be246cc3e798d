@@ -1,0 +1,36 @@
+package com.mvc.controller;
+
+import com.mvc.service.UserService;
+import com.mvc.service.UserServiceImpl;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+//로그인 담당 컨트롤러
+public class UserController {
+	
+	UserService uservice;
+	public UserController() {
+		uservice = new UserServiceImpl();
+	}
+
+	public void loginForm(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/loginForm.jsp");
+	}
+
+	public void loginProcess(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		//1. id, pw 파라메터 받기
+		//2. 받은 파라메터로 db 에 존재 확인
+		//3. 확인 결과 받기
+		//4. 결과에 따라 화면 전환
+	}
+
+	public void logout(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

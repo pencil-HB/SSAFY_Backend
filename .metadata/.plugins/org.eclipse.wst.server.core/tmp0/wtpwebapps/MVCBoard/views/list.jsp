@@ -1,6 +1,6 @@
 <%@page import="com.mvc.vo.Board"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="utf-8"%>
 
 <html>
@@ -24,6 +24,29 @@
 	<div class="container text-center">
 		<img src="image/f1.jpg" />
 		<h1>MVC 게시판</h1>
+		
+		<jsp:include page="loginCheck.jsp"/>
+		
+		<form method="post" action="board?act=search">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">검 색: </label>
+                </div>
+                <div class="col-auto">
+                    <select name="search" class="form-select"
+                        aria-label="Default select example">
+                        <option value="name">이 름</option>
+                        <option value="title">제 목</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" name="word">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">검  색</button>
+                </div>
+            </div>
+        </form>
 
 		<table class="table table-striped">
 			<thead>

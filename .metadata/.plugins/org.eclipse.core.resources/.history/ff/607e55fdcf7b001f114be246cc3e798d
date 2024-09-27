@@ -1,0 +1,32 @@
+package com.mvc.controller;
+
+import com.mvc.service.UserService;
+import com.mvc.service.UserServiceImpl;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+//로그인 담당 컨트롤러
+public class UserController {
+	
+	UserService uservice;
+	public UserController() {
+		uservice = new UserServiceImpl();
+	}
+
+	public void loginForm(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void loginProcess(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void logout(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

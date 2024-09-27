@@ -37,6 +37,8 @@ C:\ssafy\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\279767691
 \board4_cookie_session\src\main\java
 C:\ssafy\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\972541221.index
 \board4_cookie_session\src\main\java
+C:\ssafy\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1340988860.index
+\BackendProject\src\main\java
 C:\ssafy\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4086193177.index
 \0923_Servlet\01_skeleton\board0_form\src\main\java
 C:\ssafy\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\860055353.index

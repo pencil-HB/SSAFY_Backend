@@ -40,4 +40,11 @@ public class BoardServiceImpl implements BoardService{
 		
 	}
 
+	@Override
+	public ArrayList<Board> search(String type, String word) {
+		return dao.search(type, word);
+		// TODO Auto-generated method stub
+		
+	}
+
 }

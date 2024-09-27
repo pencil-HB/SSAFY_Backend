@@ -11,4 +11,5 @@ public interface BoardDAO {
 	public void countUp(String num);
 	public boolean insert(Board b);//새글 등록
 	public boolean delete(String num);//글 삭제
+	public ArrayList<Board> search(String type, String word);
 }

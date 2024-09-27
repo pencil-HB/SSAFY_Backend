@@ -10,4 +10,5 @@ public interface BoardService {
 	public Board selectOne(String num);//해당 번호의 글 하나
 	public boolean insert(Board b);//새글 등록
 	public boolean delete(String num);//글 삭제
+	public ArrayList<Board> search(String type, String word);
 }
