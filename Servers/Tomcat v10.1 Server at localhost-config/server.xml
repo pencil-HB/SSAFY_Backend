@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="basic_servlet" path="/basic_servlet" reloadable="true" source="org.eclipse.jst.jee.server:basic_servlet"/><Context docBase="BackendProject" path="/Backend" reloadable="true" source="org.eclipse.jst.jee.server:BackendProject"/><Context docBase="board1_servlet" path="/board1" reloadable="true" source="org.eclipse.jst.jee.server:board1_servlet"/><Context docBase="basic_jsp" path="/basic_jsp" reloadable="true" source="org.eclipse.jst.jee.server:basic_jsp"/><Context docBase="board3_mvc" path="/board3_mvc" reloadable="true" source="org.eclipse.jst.jee.server:board3_mvc"/><Context docBase="MVCBoard" path="/mvc" reloadable="true" source="org.eclipse.jst.jee.server:MVCBoard"/><Context docBase="board4_cookie_session" path="/board" reloadable="true" source="org.eclipse.jst.jee.server:board4_cookie_session"/></Host>
+      <Context docBase="WebTest_seoul_13_KimHyeBin" path="/WebTest_city_ban_name_sol_12" reloadable="true" source="org.eclipse.jst.jee.server:WebTest_seoul_13_KimHyeBin"/></Host>
     </Engine>
   </Service>
 </Server>

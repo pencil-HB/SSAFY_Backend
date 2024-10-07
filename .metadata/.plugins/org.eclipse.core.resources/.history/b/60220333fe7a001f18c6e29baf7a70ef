@@ -1,6 +1,0 @@
-package com.mvc.front;
-
-//FrontController 에서 요청을 넘겨 받아 처리
-public class BoardController {
-
-}
